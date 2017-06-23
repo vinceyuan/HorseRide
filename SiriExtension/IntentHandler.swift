@@ -22,6 +22,8 @@ class IntentHandler: INExtension  {
     override func handler(for intent: INIntent) -> Any? {
         if intent is INSendMessageIntent || intent is INSearchForMessagesIntentHandling || intent is INSetMessageAttributeIntentHandling {
             return HRMessageIntentsHandler()
+        } else if intent is INSendPaymentIntent {
+            return HRPaymentIntentsHandler()
         }
 
         return nil

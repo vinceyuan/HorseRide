@@ -31,6 +31,7 @@
 				<string>INSendMessageIntent</string>
 				<string>INSearchForMessagesIntent</string>
 				<string>INSetMessageAttributeIntent</string>
+				<string>INSendPaymentIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

@@ -34,6 +34,7 @@
 		588182C51EFD0F0000735F22 /* chatmock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588182BF1EFD0EDC00735F22 /* chatmock.jpg */; };
 		588182C61EFD0F0000735F22 /* chatmockdraft.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */; };
 		58C22C271EFD7F580094C49E /* HRMessageIntentsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C22C261EFD7F580094C49E /* HRMessageIntentsHandler.swift */; };
+		58E97E621EFD849A001DEA34 /* HRPaymentIntentsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E97E611EFD849A001DEA34 /* HRPaymentIntentsHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chatmockdraft.jpg; sourceTree = "<group>"; };
 		58C22C251EFD7D7A0094C49E /* HorseRide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HorseRide.entitlements; sourceTree = "<group>"; };
 		58C22C261EFD7F580094C49E /* HRMessageIntentsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRMessageIntentsHandler.swift; sourceTree = "<group>"; };
+		58E97E611EFD849A001DEA34 /* HRPaymentIntentsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRPaymentIntentsHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				5811CF491EFCEFEE00BB6810 /* IntentHandler.swift */,
 				5811CF4B1EFCEFEE00BB6810 /* Info.plist */,
 				58C22C261EFD7F580094C49E /* HRMessageIntentsHandler.swift */,
+				58E97E611EFD849A001DEA34 /* HRPaymentIntentsHandler.swift */,
 			);
 			path = SiriExtension;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58C22C271EFD7F580094C49E /* HRMessageIntentsHandler.swift in Sources */,
+				58E97E621EFD849A001DEA34 /* HRPaymentIntentsHandler.swift in Sources */,
 				5811CF4A1EFCEFEE00BB6810 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
