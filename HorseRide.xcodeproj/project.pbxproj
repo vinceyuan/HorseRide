@@ -112,6 +112,7 @@
 		5811CF881EFD0A6F00BB6810 /* INInteraction+HorseRideCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "INInteraction+HorseRideCore.m"; sourceTree = "<group>"; };
 		588182BF1EFD0EDC00735F22 /* chatmock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chatmock.jpg; sourceTree = "<group>"; };
 		588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chatmockdraft.jpg; sourceTree = "<group>"; };
+		58C22C251EFD7D7A0094C49E /* HorseRide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HorseRide.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +177,7 @@
 		5811CF301EFC4F1A00BB6810 /* HorseRide */ = {
 			isa = PBXGroup;
 			children = (
+				58C22C251EFD7D7A0094C49E /* HorseRide.entitlements */,
 				5811CF311EFC4F1A00BB6810 /* AppDelegate.swift */,
 				5811CF331EFC4F1A00BB6810 /* ViewController.swift */,
 				5811CF351EFC4F1A00BB6810 /* Main.storyboard */,
@@ -333,6 +335,11 @@
 				TargetAttributes = {
 					5811CF2D1EFC4F1A00BB6810 = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 					5811CF461EFCEFED00BB6810 = {
 						CreatedOnToolsVersion = 9.0;
@@ -597,6 +604,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HorseRide/HorseRide.entitlements;
 				INFOPLIST_FILE = HorseRide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vinceyuan.HorseRide;
@@ -611,6 +619,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HorseRide/HorseRide.entitlements;
 				INFOPLIST_FILE = HorseRide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vinceyuan.HorseRide;
