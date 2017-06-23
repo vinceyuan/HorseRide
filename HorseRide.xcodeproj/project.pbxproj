@@ -21,6 +21,18 @@
 		5811CF711EFCF06700BB6810 /* HorseRideCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5811CF6F1EFCF06700BB6810 /* HorseRideCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5811CF741EFCF06700BB6810 /* HorseRideCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5811CF6D1EFCF06600BB6810 /* HorseRideCore.framework */; };
 		5811CF751EFCF06700BB6810 /* HorseRideCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5811CF6D1EFCF06600BB6810 /* HorseRideCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5811CF7C1EFCFD9200BB6810 /* HRChatViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5811CF7A1EFCFD9200BB6810 /* HRChatViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5811CF7D1EFCFD9200BB6810 /* HRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811CF7B1EFCFD9200BB6810 /* HRChatViewController.m */; };
+		5811CF811EFD00AD00BB6810 /* HRChatView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5811CF7F1EFD00AD00BB6810 /* HRChatView.h */; };
+		5811CF821EFD00AD00BB6810 /* HRChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811CF801EFD00AD00BB6810 /* HRChatView.m */; };
+		5811CF831EFD08DC00BB6810 /* HorseRideCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5811CF6D1EFCF06600BB6810 /* HorseRideCore.framework */; };
+		5811CF841EFD08E800BB6810 /* HorseRideCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5811CF6D1EFCF06600BB6810 /* HorseRideCore.framework */; };
+		5811CF891EFD0A6F00BB6810 /* INInteraction+HorseRideCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5811CF871EFD0A6F00BB6810 /* INInteraction+HorseRideCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5811CF8A1EFD0A6F00BB6810 /* INInteraction+HorseRideCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5811CF881EFD0A6F00BB6810 /* INInteraction+HorseRideCore.m */; };
+		588182C31EFD0EEC00735F22 /* chatmock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588182BF1EFD0EDC00735F22 /* chatmock.jpg */; };
+		588182C41EFD0EEC00735F22 /* chatmockdraft.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */; };
+		588182C51EFD0F0000735F22 /* chatmock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588182BF1EFD0EDC00735F22 /* chatmock.jpg */; };
+		588182C61EFD0F0000735F22 /* chatmockdraft.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +104,14 @@
 		5811CF6D1EFCF06600BB6810 /* HorseRideCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HorseRideCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5811CF6F1EFCF06700BB6810 /* HorseRideCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorseRideCore.h; sourceTree = "<group>"; };
 		5811CF701EFCF06700BB6810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5811CF7A1EFCFD9200BB6810 /* HRChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRChatViewController.h; sourceTree = "<group>"; };
+		5811CF7B1EFCFD9200BB6810 /* HRChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRChatViewController.m; sourceTree = "<group>"; };
+		5811CF7F1EFD00AD00BB6810 /* HRChatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRChatView.h; sourceTree = "<group>"; };
+		5811CF801EFD00AD00BB6810 /* HRChatView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRChatView.m; sourceTree = "<group>"; };
+		5811CF871EFD0A6F00BB6810 /* INInteraction+HorseRideCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "INInteraction+HorseRideCore.h"; sourceTree = "<group>"; };
+		5811CF881EFD0A6F00BB6810 /* INInteraction+HorseRideCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "INInteraction+HorseRideCore.m"; sourceTree = "<group>"; };
+		588182BF1EFD0EDC00735F22 /* chatmock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chatmock.jpg; sourceTree = "<group>"; };
+		588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chatmockdraft.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5811CF831EFD08DC00BB6810 /* HorseRideCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5811CF841EFD08E800BB6810 /* HorseRideCore.framework in Frameworks */,
 				5811CF531EFCEFEE00BB6810 /* IntentsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,8 +216,16 @@
 		5811CF6E1EFCF06700BB6810 /* HorseRideCore */ = {
 			isa = PBXGroup;
 			children = (
+				588182BF1EFD0EDC00735F22 /* chatmock.jpg */,
+				588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */,
 				5811CF6F1EFCF06700BB6810 /* HorseRideCore.h */,
 				5811CF701EFCF06700BB6810 /* Info.plist */,
+				5811CF871EFD0A6F00BB6810 /* INInteraction+HorseRideCore.h */,
+				5811CF881EFD0A6F00BB6810 /* INInteraction+HorseRideCore.m */,
+				5811CF7A1EFCFD9200BB6810 /* HRChatViewController.h */,
+				5811CF7B1EFCFD9200BB6810 /* HRChatViewController.m */,
+				5811CF7F1EFD00AD00BB6810 /* HRChatView.h */,
+				5811CF801EFD00AD00BB6810 /* HRChatView.m */,
 			);
 			path = HorseRideCore;
 			sourceTree = "<group>";
@@ -207,7 +237,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5811CF811EFD00AD00BB6810 /* HRChatView.h in Headers */,
 				5811CF711EFCF06700BB6810 /* HorseRideCore.h in Headers */,
+				5811CF7C1EFCFD9200BB6810 /* HRChatViewController.h in Headers */,
+				5811CF891EFD0A6F00BB6810 /* INInteraction+HorseRideCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +389,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5811CF591EFCEFEE00BB6810 /* MainInterface.storyboard in Resources */,
+				588182C51EFD0F0000735F22 /* chatmock.jpg in Resources */,
+				588182C61EFD0F0000735F22 /* chatmockdraft.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +398,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				588182C31EFD0EEC00735F22 /* chatmock.jpg in Resources */,
+				588182C41EFD0EEC00735F22 /* chatmockdraft.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +435,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5811CF8A1EFD0A6F00BB6810 /* INInteraction+HorseRideCore.m in Sources */,
+				5811CF821EFD00AD00BB6810 /* HRChatView.m in Sources */,
+				5811CF7D1EFCFD9200BB6810 /* HRChatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +735,7 @@
 				5811CF421EFC4F1A00BB6810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5811CF611EFCEFEE00BB6810 /* Build configuration list for PBXNativeTarget "SiriExtensionUI" */ = {
 			isa = XCConfigurationList;
@@ -703,6 +744,7 @@
 				5811CF631EFCEFEE00BB6810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5811CF641EFCEFEE00BB6810 /* Build configuration list for PBXNativeTarget "SiriExtension" */ = {
 			isa = XCConfigurationList;
@@ -711,6 +753,7 @@
 				5811CF661EFCEFEE00BB6810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5811CF761EFCF06700BB6810 /* Build configuration list for PBXNativeTarget "HorseRideCore" */ = {
 			isa = XCConfigurationList;
@@ -719,6 +762,7 @@
 				5811CF781EFCF06700BB6810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,4 +16,6 @@ FOUNDATION_EXPORT const unsigned char HorseRideCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <HorseRideCore/PublicHeader.h>
 
+#import <HorseRideCore/INInteraction+HorseRideCore.h>
+#import <HorseRideCore/HRChatViewController.h>
 

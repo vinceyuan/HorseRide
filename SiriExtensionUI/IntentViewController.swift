@@ -7,6 +7,7 @@
 //
 
 import IntentsUI
+import HorseRideCore
 
 // As an example, this extension's Info.plist has been configured to handle interactions for INSendMessageIntent.
 // You will want to replace this or add other intents as appropriate.
@@ -32,11 +33,41 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
     // Prepare your view controller for the interaction to handle.
     func configure(with interaction: INInteraction, context: INUIHostedViewContext, completion: @escaping (CGSize) -> Void) {
         // Do configuration here, including preparing views and calculating a desired size for presentation.
-        completion(self.desiredSize)
+        var size: CGSize
+
+        // Check if the interaction describes a SendMessageIntent.
+        if interaction.representsSendMessageIntent {
+            // If it is, let's set up a view controller.
+            let chatViewController = HRChatViewController()
+            chatViewController.messageContent = interaction.messageContent
+
+            switch interaction.intentHandlingStatus {
+            case .unspecified, .inProgress, .ready, .failure:
+                chatViewController.isSent = false
+
+            case .success, .deferredToApplication:
+                chatViewController.isSent = true
+            }
+
+            present(chatViewController, animated: false, completion: nil)
+
+            size = desiredSize
+        }
+        else {
+            // Otherwise, we'll tell the host to draw us at zero size.
+            size = CGSize.zero
+        }
+
+        completion(size)
     }
     
     var desiredSize: CGSize {
-        return self.extensionContext!.hostedViewMaximumAllowedSize
+        var size = self.extensionContext!.hostedViewMaximumAllowedSize
+        size.height = 300
+        return size
     }
-    
+
+    var displaysMessage: Bool {
+        return false
+    }
 }
