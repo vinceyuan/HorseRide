@@ -10,7 +10,7 @@ import UIKit
 import Intents
 import HorseRideCore
 
-class HRPaymentIntentsHandler: NSObject, INSendPaymentIntentHandling {
+class HRPaymentIntentsHandler: NSObject, INSendPaymentIntentHandling, INRequestPaymentIntentHandling {
     func handle(sendPayment intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Void) {
         // Check that we have valid values for payee and currencyAmount
         guard let payee = intent.payee, let amount = intent.currencyAmount else {
@@ -19,5 +19,14 @@ class HRPaymentIntentsHandler: NSObject, INSendPaymentIntentHandling {
         // Make your payment!
         print("Sending \(amount) payment to \(payee)!")
         completion(INSendPaymentIntentResponse(code: .success, userActivity: nil))
+    }
+
+    func handle(requestPayment intent: INRequestPaymentIntent, completion: @escaping (INRequestPaymentIntentResponse) -> Void) {
+        guard let payer = intent.payer, let amount = intent.currencyAmount else {
+            return completion(INRequestPaymentIntentResponse(code: .unspecified, userActivity: nil))
+        }
+        // Request payment!
+        print("Requesting \(amount) payment to \(payer)!")
+        completion(INRequestPaymentIntentResponse(code: .success, userActivity: nil))
     }
 }
