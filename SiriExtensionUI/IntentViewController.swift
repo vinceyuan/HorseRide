@@ -63,7 +63,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
     
     var desiredSize: CGSize {
         var size = self.extensionContext!.hostedViewMaximumAllowedSize
-        size.height = 300
+        size.height = 280
         return size
     }
 
