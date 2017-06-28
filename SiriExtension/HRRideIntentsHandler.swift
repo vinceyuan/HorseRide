@@ -91,9 +91,9 @@ class HRRideIntentsHandler: NSObject, INRequestRideIntentHandling, INGetRideStat
             rideService.findRide(from: from, to: to, completion: { [unowned self] rides in
                 if rides.count > 0 {
                     let rideStatus = self.convertRidesToRideStatus(rides: rides,
-                                                                   from: from,
-                                                                   to: to,
-                                                                   rideType: rideType)
+                                                       from: from,
+                                                         to: to,
+                                                   rideType: rideType)
                     let rideInfo: [String : Any] =
                         [ HRRideIntentsHandler.rideOptionKey : rideStatus.rideOption!.name,
                           HRRideIntentsHandler.pickupDateKey : rideStatus.rideOption!.estimatedPickupDate]

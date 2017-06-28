@@ -36,19 +36,19 @@ class HRDummyRideService: NSObject, HRRideService {
                          timeInMinutes: 4,
                          rideType: .slowHorse,
                          price: 10,
-                         currency: "USD")
+                         currency: "SGD")
 
         let ride2 = HRRide(carNumber: "11",
                          timeInMinutes: 2,
                          rideType: .fastHorse,
                          price: 15,
-                         currency: "USD")
+                         currency: "SGD")
 
         let ride3 = HRRide(carNumber: "80",
                          timeInMinutes: 7,
                          rideType: .slowHorse,
                          price: 12,
-                         currency: "USD")
+                         currency: "SGD")
 
         return [ ride1, ride2, ride3 ]
     }
