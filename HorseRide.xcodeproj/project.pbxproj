@@ -33,6 +33,9 @@
 		588182C41EFD0EEC00735F22 /* chatmockdraft.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */; };
 		588182C51EFD0F0000735F22 /* chatmock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588182BF1EFD0EDC00735F22 /* chatmock.jpg */; };
 		588182C61EFD0F0000735F22 /* chatmockdraft.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */; };
+		58B360E71F04168D00C3DC7B /* HRRideIntentsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B360E61F04168D00C3DC7B /* HRRideIntentsHandler.swift */; };
+		58B360ED1F04231B00C3DC7B /* HRRideStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B360EC1F04231B00C3DC7B /* HRRideStorage.swift */; };
+		58B360EF1F04257700C3DC7B /* HRRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B360EE1F04255B00C3DC7B /* HRRide.swift */; };
 		58C22C271EFD7F580094C49E /* HRMessageIntentsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C22C261EFD7F580094C49E /* HRMessageIntentsHandler.swift */; };
 		58E97E621EFD849A001DEA34 /* HRPaymentIntentsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E97E611EFD849A001DEA34 /* HRPaymentIntentsHandler.swift */; };
 /* End PBXBuildFile section */
@@ -114,6 +117,9 @@
 		5811CF881EFD0A6F00BB6810 /* INInteraction+HorseRideCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "INInteraction+HorseRideCore.m"; sourceTree = "<group>"; };
 		588182BF1EFD0EDC00735F22 /* chatmock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chatmock.jpg; sourceTree = "<group>"; };
 		588182C01EFD0EDC00735F22 /* chatmockdraft.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chatmockdraft.jpg; sourceTree = "<group>"; };
+		58B360E61F04168D00C3DC7B /* HRRideIntentsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRRideIntentsHandler.swift; sourceTree = "<group>"; };
+		58B360EC1F04231B00C3DC7B /* HRRideStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRRideStorage.swift; sourceTree = "<group>"; };
+		58B360EE1F04255B00C3DC7B /* HRRide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRRide.swift; sourceTree = "<group>"; };
 		58C22C251EFD7D7A0094C49E /* HorseRide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HorseRide.entitlements; sourceTree = "<group>"; };
 		58C22C261EFD7F580094C49E /* HRMessageIntentsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRMessageIntentsHandler.swift; sourceTree = "<group>"; };
 		58E97E611EFD849A001DEA34 /* HRPaymentIntentsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRPaymentIntentsHandler.swift; sourceTree = "<group>"; };
@@ -195,10 +201,13 @@
 		5811CF481EFCEFEE00BB6810 /* SiriExtension */ = {
 			isa = PBXGroup;
 			children = (
+				58B360EE1F04255B00C3DC7B /* HRRide.swift */,
 				5811CF491EFCEFEE00BB6810 /* IntentHandler.swift */,
 				5811CF4B1EFCEFEE00BB6810 /* Info.plist */,
 				58C22C261EFD7F580094C49E /* HRMessageIntentsHandler.swift */,
 				58E97E611EFD849A001DEA34 /* HRPaymentIntentsHandler.swift */,
+				58B360E61F04168D00C3DC7B /* HRRideIntentsHandler.swift */,
+				58B360EC1F04231B00C3DC7B /* HRRideStorage.swift */,
 			);
 			path = SiriExtension;
 			sourceTree = "<group>";
@@ -355,6 +364,7 @@
 					};
 					5811CF6C1EFCF06600BB6810 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -432,8 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B360ED1F04231B00C3DC7B /* HRRideStorage.swift in Sources */,
+				58B360EF1F04257700C3DC7B /* HRRide.swift in Sources */,
 				58C22C271EFD7F580094C49E /* HRMessageIntentsHandler.swift in Sources */,
 				58E97E621EFD849A001DEA34 /* HRPaymentIntentsHandler.swift in Sources */,
+				58B360E71F04168D00C3DC7B /* HRRideIntentsHandler.swift in Sources */,
 				5811CF4A1EFCEFEE00BB6810 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,6 +705,7 @@
 		5811CF771EFCF06700BB6810 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -704,6 +718,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vinceyuan.HorseRideCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -714,6 +729,7 @@
 		5811CF781EFCF06700BB6810 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

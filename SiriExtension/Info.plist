@@ -33,6 +33,8 @@
 				<string>INSetMessageAttributeIntent</string>
 				<string>INSendPaymentIntent</string>
 				<string>INRequestPaymentIntent</string>
+				<string>INRequestRideIntent</string>
+				<string>INGetRideStatusIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

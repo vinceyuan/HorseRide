@@ -20,10 +20,12 @@ import Intents
 class IntentHandler: INExtension  {
     
     override func handler(for intent: INIntent) -> Any? {
-        if intent is INSendMessageIntent || intent is INSearchForMessagesIntentHandling || intent is INSetMessageAttributeIntentHandling {
+        if intent is INSendMessageIntent || intent is INSearchForMessagesIntent || intent is INSetMessageAttributeIntent {
             return HRMessageIntentsHandler()
         } else if intent is INSendPaymentIntent || intent is INRequestPaymentIntent {
             return HRPaymentIntentsHandler()
+        } else if intent is INRequestRideIntent || intent is INGetRideStatusIntent {
+            return HRRideIntentsHandler()
         }
 
         return nil
