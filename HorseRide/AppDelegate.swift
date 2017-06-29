@@ -41,6 +41,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if url.host == nil {
+            return true;
+        }
 
+        let urlString = url.absoluteString
+        let queryArray = urlString.components(separatedBy: "/")
+        if queryArray.count >= 4 {
+            let query = queryArray[2]
+            if query == "t" {
+                let alertController = UIAlertController(title: nil, message: queryArray[3], preferredStyle: UIAlertControllerStyle.alert)
+
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                    (result : UIAlertAction) -> Void in
+                    print("You pressed OK")
+                }
+                alertController.addAction(okAction)
+                window?.rootViewController!.present(alertController, animated: true, completion: nil)
+            }
+        }
+        return true;
+    }
 }
 
