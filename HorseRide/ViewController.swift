@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             }
         }
 
-        nfcHelper.onNFCResult = onNFCResult(success:msg:)
+        nfcHelper.onNFCResult = onNFCResult(success:type:msg:)
 
     }
 
@@ -41,17 +41,42 @@ class ViewController: UIViewController {
                 nfcHelper.restartSession()
     }
 
-    func onNFCResult(success: Bool, msg: String) {
+    func onNFCResult(success: Bool, type: String, msg: String) {
         if !success {
             return
         }
         DispatchQueue.main.async {
-            self.nfcPayloadLabel.text = "\(self.nfcPayloadLabel.text!)\n\(msg)"
-            if msg == "\u{4}grab.com" {
-                let url = URL(string: "https://grab.com")
-                let when = DispatchTime.now() + 1 // Delay 1 second
-                DispatchQueue.main.asyncAfter(deadline: when) {
+            var realMsg = ""
+            if type == "U" && msg.hasPrefix("\u{3}") {
+                let start = msg.index(msg.startIndex, offsetBy: 1)
+                let end = msg.endIndex
+                realMsg = "http://" + msg[start..<end]
+            } else if type == "U" && msg.hasPrefix("\u{4}") {
+                let start = msg.index(msg.startIndex, offsetBy: 1)
+                let end = msg.endIndex
+                realMsg = "https://" + msg[start..<end]
+            } else if type == "T" {
+                let start = msg.index(msg.startIndex, offsetBy: 3)
+                let end = msg.endIndex
+                realMsg = String(msg[start..<end])
+            }
+            print(realMsg)
+
+            let when = DispatchTime.now() + 1 // Delay 1 second
+            self.nfcPayloadLabel.text = "\(self.nfcPayloadLabel.text!)\n\(realMsg)"
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                if type == "U" {
+                    let url = URL(string: realMsg)
                     UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+                } else if type == "T" {
+                    let alertController = UIAlertController(title: nil, message: realMsg, preferredStyle: UIAlertControllerStyle.alert)
+
+                    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                        (result : UIAlertAction) -> Void in
+                        print("You pressed OK")
+                    }
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
                 }
             }
         }
