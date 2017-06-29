@@ -38,16 +38,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICS-nk-ioS">
+                                <rect key="frame" x="95" y="563" width="185" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="7bD-mY-02W"/>
+                                    <constraint firstAttribute="height" constant="30" id="DiK-rV-SAl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Scan NFC tag"/>
+                                <connections>
+                                    <action selector="didPressScanNFCTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oor-9j-Pqh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQD-C8-bwV">
+                                <rect key="frame" x="8" y="589" width="359" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="mTh-pK-TfW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Nr6-4c-eZP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="3cJ-7G-3dL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sQD-C8-bwV" secondAttribute="bottom" id="3q4-3f-h67"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nr6-4c-eZP" secondAttribute="trailing" constant="18" id="5Ai-WL-f8h"/>
+                            <constraint firstItem="ICS-nk-ioS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9L6-05-avT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ICS-nk-ioS" secondAttribute="bottom" constant="74" id="Hiu-Vf-Pcr"/>
                             <constraint firstItem="XTA-0V-NcY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Icw-gP-KMv"/>
+                            <constraint firstAttribute="trailing" secondItem="sQD-C8-bwV" secondAttribute="trailing" constant="8" id="MX3-UW-oQY"/>
+                            <constraint firstItem="sQD-C8-bwV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="N71-EH-5Ri"/>
                             <constraint firstItem="XTA-0V-NcY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jFV-Rd-cmF"/>
                             <constraint firstItem="Nr6-4c-eZP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="qTe-Xy-OFx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nfcPayloadLabel" destination="sQD-C8-bwV" id="Nd8-Fx-pVp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

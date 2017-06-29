@@ -38,6 +38,7 @@
 		58B360EF1F04257700C3DC7B /* HRRide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B360EE1F04255B00C3DC7B /* HRRide.swift */; };
 		58C22C271EFD7F580094C49E /* HRMessageIntentsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C22C261EFD7F580094C49E /* HRMessageIntentsHandler.swift */; };
 		58E97E621EFD849A001DEA34 /* HRPaymentIntentsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E97E611EFD849A001DEA34 /* HRPaymentIntentsHandler.swift */; };
+		58F6D94B1F056C020019CC83 /* NFCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F6D94A1F056BFC0019CC83 /* NFCHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		58C22C251EFD7D7A0094C49E /* HorseRide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HorseRide.entitlements; sourceTree = "<group>"; };
 		58C22C261EFD7F580094C49E /* HRMessageIntentsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRMessageIntentsHandler.swift; sourceTree = "<group>"; };
 		58E97E611EFD849A001DEA34 /* HRPaymentIntentsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRPaymentIntentsHandler.swift; sourceTree = "<group>"; };
+		58F6D94A1F056BFC0019CC83 /* NFCHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 		5811CF301EFC4F1A00BB6810 /* HorseRide */ = {
 			isa = PBXGroup;
 			children = (
+				58F6D94A1F056BFC0019CC83 /* NFCHelper.swift */,
 				58C22C251EFD7D7A0094C49E /* HorseRide.entitlements */,
 				5811CF311EFC4F1A00BB6810 /* AppDelegate.swift */,
 				5811CF331EFC4F1A00BB6810 /* ViewController.swift */,
@@ -351,6 +354,9 @@
 					5811CF2D1EFC4F1A00BB6810 = {
 						CreatedOnToolsVersion = 9.0;
 						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
 							com.apple.Siri = {
 								enabled = 1;
 							};
@@ -434,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5811CF341EFC4F1A00BB6810 /* ViewController.swift in Sources */,
+				58F6D94B1F056C020019CC83 /* NFCHelper.swift in Sources */,
 				5811CF321EFC4F1A00BB6810 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
