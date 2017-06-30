@@ -59,17 +59,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c5t-BU-XCL">
+                                <rect key="frame" x="0.0" y="292" width="375" height="255"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Talk to Siri:
+Book a ride from [home] to [office] using HorseRide.
+Send a message to [driver] saying [wait a second].
+Send [driver] [5] dollars.
+Request [5] dollars from [driver].
+
+You can also scan a NFC tag.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Nr6-4c-eZP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="3cJ-7G-3dL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sQD-C8-bwV" secondAttribute="bottom" id="3q4-3f-h67"/>
+                            <constraint firstItem="ICS-nk-ioS" firstAttribute="top" secondItem="c5t-BU-XCL" secondAttribute="bottom" constant="16" id="4xs-wk-mBS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nr6-4c-eZP" secondAttribute="trailing" constant="18" id="5Ai-WL-f8h"/>
                             <constraint firstItem="ICS-nk-ioS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9L6-05-avT"/>
+                            <constraint firstAttribute="trailing" secondItem="c5t-BU-XCL" secondAttribute="trailing" id="BAc-4Z-8aO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ICS-nk-ioS" secondAttribute="bottom" constant="74" id="Hiu-Vf-Pcr"/>
                             <constraint firstItem="XTA-0V-NcY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Icw-gP-KMv"/>
+                            <constraint firstItem="c5t-BU-XCL" firstAttribute="top" secondItem="Nr6-4c-eZP" secondAttribute="bottom" constant="8" id="Jf3-kq-eoC"/>
                             <constraint firstAttribute="trailing" secondItem="sQD-C8-bwV" secondAttribute="trailing" constant="8" id="MX3-UW-oQY"/>
                             <constraint firstItem="sQD-C8-bwV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="N71-EH-5Ri"/>
+                            <constraint firstItem="c5t-BU-XCL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nc0-0o-Hql"/>
                             <constraint firstItem="XTA-0V-NcY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jFV-Rd-cmF"/>
                             <constraint firstItem="Nr6-4c-eZP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="qTe-Xy-OFx"/>
                         </constraints>
