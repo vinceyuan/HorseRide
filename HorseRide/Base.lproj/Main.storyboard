@@ -67,6 +67,7 @@ Book a ride from [home] to [office] using HorseRide.
 Send a message to [driver] saying [wait a second].
 Send [driver] [5] dollars.
 Request [5] dollars from [driver].
+Show my code.
 
 You can also scan a NFC tag.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
