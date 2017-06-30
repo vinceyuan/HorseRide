@@ -50,8 +50,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let queryArray = urlString.components(separatedBy: "/")
         if queryArray.count >= 4 {
             let query = queryArray[2]
-            if query == "t" {
-                let alertController = UIAlertController(title: nil, message: queryArray[3], preferredStyle: UIAlertControllerStyle.alert)
+            // Example: horseride://promo/?v=1&t=Enjoy%20$1%20discount%20on%20your%20next%20ride
+            if query == "promo" {
+                let queryItems = URLComponents(string: urlString)?.queryItems
+                var message = ""
+                if let t = queryItems?.filter({$0.name == "t"}).first {
+                    message = t.value!.removingPercentEncoding!
+                }
+                let alertController = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
 
                 let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                     (result : UIAlertAction) -> Void in
