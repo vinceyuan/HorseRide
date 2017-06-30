@@ -26,6 +26,8 @@ class IntentHandler: INExtension  {
             return HRPaymentIntentsHandler()
         } else if intent is INRequestRideIntent || intent is INGetRideStatusIntent {
             return HRRideIntentsHandler()
+        } else if intent is INGetVisualCodeIntent {
+            return HRVisualCodeIntentHandler()
         }
 
         return nil

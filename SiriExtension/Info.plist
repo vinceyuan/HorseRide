@@ -35,6 +35,7 @@
 				<string>INRequestPaymentIntent</string>
 				<string>INRequestRideIntent</string>
 				<string>INGetRideStatusIntent</string>
+				<string>INGetVisualCodeIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
